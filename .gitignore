@@ -1,0 +1,41 @@
+# ──────────────────────────────────────────────────────────────
+# .gitignore — files that should NOT be committed to git
+# ──────────────────────────────────────────────────────────────
+
+# ── Secrets & environment ──────────────────────────────────────
+.env
+
+# ── Python cache ───────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ───────────────────────────────────────
+.venv/
+venv/
+ENV/
+env/
+
+# ── IDEs & editors ─────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# ── OS files ───────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ───────────────────────────────────────────────────────
+*.log
+logs/

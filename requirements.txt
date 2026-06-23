@@ -1,0 +1,33 @@
+# ──────────────────────────────────────────────────────────────
+# Fast MCP Server — Python Dependencies & Run Instructions
+# ──────────────────────────────────────────────────────────────
+#
+# Option 1: Run with `uv` (Recommended)
+#   1. Sync dependencies:  uv pip install -r requirements.txt
+#   2. Run server:         uv run python server.py
+#
+# Option 2: Run with standard `pip` / `venv`
+#   1. Create env:         python -m venv .venv
+#   2. Activate:           .venv\Scripts\activate      (Windows)
+#                          source .venv/bin/activate   (macOS/Linux)
+#   3. Install:            pip install -r requirements.txt
+#   4. Run server:         python server.py
+#
+# ──────────────────────────────────────────────────────────────
+
+# Core: FastMCP framework
+fastmcp
+
+# Loads values from a .env file into environment variables
+python-dotenv
+
+# Groq API client for free LLMs
+groq
+
+# Hugging Face Hub for inference API
+huggingface_hub
+
+# Model Context Protocol SDK for agent client
+mcp
+
+# Google Gemini GenAI SDK removed (no longer needed)

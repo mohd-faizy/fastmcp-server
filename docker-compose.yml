@@ -1,0 +1,35 @@
+# ──────────────────────────────────────────────────────────────
+# Fast MCP Server — Docker Compose
+# ──────────────────────────────────────────────────────────────
+# Start:   docker compose up --build
+# Stop:    docker compose down
+# ──────────────────────────────────────────────────────────────
+
+services:
+  mcp-server:
+    build: .
+    image: mohfdaizy/fast-mcp-server:latest
+    ports:
+      - "8000:8000"          # host:container
+    environment:
+      MCP_TRANSPORT: sse
+      MCP_HOST: "0.0.0.0"
+      MCP_PORT: "8000"
+    restart: unless-stopped  # auto-restart on failure or reboot
+
+
+# ──────────────────────────────────────────────────────────────
+# Steps
+# 1. build: docker compose up --build
+# 2. stop: docker compose down
+# 3. services:
+# 4.   mcp-server:
+# 5.     build: .
+# 6.     image: mohfdaizy/fast-mcp-server:latest
+# 7.     ports:
+# 8.       - "8000:8000"          # host:container
+# 9.     environment:
+# 10.       MCP_TRANSPORT: sse
+# 11.       MCP_HOST: "0.0.0.0"
+# 12.       MCP_PORT: "8000"
+# 13.     restart: unless-stopped  # auto-restart on failure or reboot
