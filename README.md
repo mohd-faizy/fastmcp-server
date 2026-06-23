@@ -25,8 +25,8 @@
 <p align="center">
   <a href="https://github.com/mohd-faizy/fastmcp-server/stargazers"><img src="https://img.shields.io/github/stars/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=ffd700" alt="Stars"></a>
   <a href="https://github.com/mohd-faizy/fastmcp-server/issues"><img src="https://img.shields.io/github/issues/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=ef4444" alt="GitHub Issues"></a>
-  <a href="https://github.com/mohd-faizy/fastmcp-server/commits/main"><img src="https://img.shields.io/badge/dynamic/xml?color=8b5cf6&amp;label=last%20commit&amp;query=string((%2F%2F*%5Blocal-name()%3D'text'%5D)%5Blast()%5D)&amp;url=https%3A%2F%2Fbadgen.net%2Fgithub%2Flast-commit%2Fmohd-faizy%2Ffastmcp-server&amp;style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Last Commit"></a>
-  <a href="https://github.com/mohd-faizy/fastmcp-server"><img src="https://img.shields.io/badge/repo_size-2.1_MB-6b7280?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Repo Size"></a>
+  <a href="https://github.com/mohd-faizy/fastmcp-server/commits/main"><img src="https://img.shields.io/github/last-commit/mohd-faizy/fastmcp-server?style=for-the-badge&logo=git&logoColor=white&color=8b5cf6" alt="Last Commit"></a>
+  <a href="https://github.com/mohd-faizy/fastmcp-server"><img src="https://img.shields.io/github/repo-size/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=6b7280" alt="Repo Size"></a>
 </p>
 
 <!-- Meta & Community -->
@@ -102,8 +102,8 @@ The server is kept clean and minimal, implementing the following primitives:
 ### 2. Installation
 Clone the repository:
 ```bash
-git clone https://github.com/mohdfaizy/fast-mcp-server.git
-cd fast-mcp-server
+git clone https://github.com/mohd-faizy/fastmcp-server.git
+cd fastmcp-server
 ```
 
 Choose one of the virtual environment options below:
@@ -200,16 +200,16 @@ To test the server using Claude Desktop:
    ```json
    {
      "mcpServers": {
-       "fast-mcp-server": {
-         "command": "C:\\Users\\yourname\\projects\\fast-mcp-server\\.venv\\Scripts\\python.exe",
-         "args": ["C:\\Users\\yourname\\projects\\fast-mcp-server\\server.py"]
-       }
-     }
-   }
-   ```
-   *(Note: Ensure paths are absolute, and use double backslashes on Windows).*
+        "fastmcp-server": {
+          "command": "C:\\Users\\yourname\\projects\\fastmcp-server\\.venv\\Scripts\\python.exe",
+          "args": ["C:\\Users\\yourname\\projects\\fastmcp-server\\server.py"]
+        }
+      }
+    }
+    ```
+    *(Note: Ensure paths are absolute, and use double backslashes on Windows).*
 3. Restart Claude Desktop. The plug icon will appear, indicating that your tools are successfully connected!
-4. **Click the Plug Icon**: You will see a list of all your tools loaded directly from `fast-mcp-server`.
+4. **Click the Plug Icon**: You will see a list of all your tools loaded directly from `fastmcp-server`.
 5. **Prompt Claude**: Start a new chat and simply ask Claude to use one of the tools (e.g., *"Use the add_numbers tool to add 150.5 and 300.2"*). Claude will now seamlessly execute your local Python code and give you the answer!
 
 ---
@@ -274,14 +274,14 @@ This guide will walk you through building your server into a Docker image, verif
 #### Step 1: Build the Image Locally
 First, build the Docker image and tag it with your Docker Hub username.
 ```bash
-docker build -t mohfdaizy/fast-mcp-server:latest .
+docker build -t mohd-faizy/fastmcp-server:latest .
 ```
 *(Note: The `.` at the end tells Docker to use the `Dockerfile` in the current directory).*
 
 #### Step 2: Test the Container Locally (Optional but Recommended)
 Before pushing the image online, ensure it runs correctly on your machine.
 ```bash
-docker run -d -p 8000:8000 --name mcp-server mohfdaizy/fast-mcp-server:latest
+docker run -d -p 8000:8000 --name mcp-server mohd-faizy/fastmcp-server:latest
 ```
 - `-d`: Runs the container in the background (detached mode).
 - `-p 8000:8000`: Maps port 8000 on your machine to port 8000 inside the container.
@@ -298,7 +298,7 @@ To push an image to Docker Hub, you must authenticate. Instead of using your acc
 
 1. Go to [Docker Hub Security Settings](https://hub.docker.com/settings/security).
 2. Click **New Access Token**.
-3. Give it a description (e.g., "fast-mcp-server-push").
+3. Give it a description (e.g., "fastmcp-server-push").
 4. ⚠️ **CRITICAL STEP**: Under **Access permissions**, change the dropdown from *Read-only* to **Read & Write**. If you leave it as Read-only, you will get an `insufficient scopes` error when you try to push!
 5. Click **Generate** and copy the token (it will look like `dckr_pat_...`).
 
@@ -307,7 +307,7 @@ Authenticate your terminal session using the token.
 
 **Standard Method:**
 ```bash
-docker login -u mohfdaizy
+docker login -u mohd-faizy
 ```
 When it asks for your `Password:`, **Right-click once** (or press Ctrl+V) to paste the token. 
 *Note: In Windows terminals, the cursor will NOT move and no characters or stars will appear when you paste passwords. This is a security feature. Just paste it blindly and press **Enter**.*
@@ -315,7 +315,7 @@ When it asks for your `Password:`, **Right-click once** (or press Ctrl+V) to pas
 **Alternative PowerShell Method:**
 If you prefer not to deal with the invisible password prompt, you can use the PowerShell pipeline to securely pass the token directly to the command:
 ```powershell
-"YOUR_NEW_TOKEN_HERE" | docker login -u mohfdaizy --password-stdin
+"YOUR_NEW_TOKEN_HERE" | docker login -u mohd-faizy --password-stdin
 ```
 
 If successful, you will see `Login Succeeded`.
@@ -324,11 +324,11 @@ If successful, you will see `Login Succeeded`.
 Now that you are authenticated with Write permissions, push your tagged image up to the cloud.
 
 ```bash
-docker push mohfdaizy/fast-mcp-server:latest
+docker push mohd-faizy/fastmcp-server:latest
 ```
-*(Note: Docker Hub's website sometimes shows a generic command like `docker push mohfdaizy/fast-mcp-server:tagname`. You must replace `:tagname` with your actual tag, which in this case is `:latest`).*
+*(Note: Docker Hub's website sometimes shows a generic command like `docker push mohd-faizy/fastmcp-server:tagname`. You must replace `:tagname` with your actual tag, which in this case is `:latest`).*
 
-Once finished, your image is live and ready to be pulled by any machine anywhere in the world using `docker pull mohfdaizy/fast-mcp-server:latest`!
+Once finished, your image is live and ready to be pulled by any machine anywhere in the world using `docker pull mohd-faizy/fastmcp-server:latest`!
 
 ---
 
@@ -339,7 +339,7 @@ For simplified deployment and service management, [docker-compose.yml](file:///c
 - **Step 3 (Services Block)**: Defines the containers to manage.
 - **Step 4 (mcp-server Service)**: Declares our container service.
 - **Step 5 (Build Context)**: Sets `build: .` to build using the local Dockerfile.
-- **Step 6 (Image Tag)**: Sets the built image tag name (`mohdfaizy/fast-mcp-server:latest`).
+- **Step 6 (Image Tag)**: Sets the built image tag name (`mohd-faizy/fastmcp-server:latest`).
 - **Step 7 & 8 (Port Mapping)**: Maps port `8000` from host to container (`"8000:8000"`).
 - **Step 9, 10, 11 & 12 (Environment Config)**: Passes environment variables to set the SSE transport type (`sse`), host (`0.0.0.0`), and port (`8000`).
 - **Step 13 (Restart Policy)**: Sets `restart: unless-stopped` to automatically restart the container on unexpected crashes or machine reboots.
@@ -358,7 +358,7 @@ docker compose down
 ## 📁 Project Structure
 
 ```
-fast-mcp-server/
+fastmcp-server/
 ├── .env.example        ← Copy to .env and fill in your values
 ├── .gitignore          ← Files that stay out of git
 ├── Dockerfile          ← Container image definition (SSE mode)

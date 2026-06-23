@@ -8,7 +8,7 @@
 services:
   mcp-server:
     build: .
-    image: mohfdaizy/fast-mcp-server:latest
+    image: mohd-faizy/fastmcp-server:latest
     ports:
       - "8000:8000"          # host:container
     environment:
@@ -25,7 +25,7 @@ services:
 # 3. services:
 # 4.   mcp-server:
 # 5.     build: .
-# 6.     image: mohfdaizy/fast-mcp-server:latest
+# 6.     image: mohd-faizy/fastmcp-server:latest
 # 7.     ports:
 # 8.       - "8000:8000"          # host:container
 # 9.     environment:
