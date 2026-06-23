@@ -400,21 +400,28 @@ That's it — restart the server/agent, and the new tool is immediately discover
 
 ## 🤔 Frequently Asked Questions
 
-**Q: What is the difference between stdio and SSE?**  
-`stdio` connects via standard input/output — the MCP client *spawns* your server as a child process and reads/writes to its stdin/stdout streams. `sse` runs your server as an HTTP web service where remote clients can connect via Server-Sent Events. Use `stdio` locally, and `sse` for remote deployments.
+- **What is the difference between stdio and SSE?**  
+  `stdio` runs the server as a local subprocess using stdin/stdout. `sse` runs it as an HTTP service with Server‑Sent Events for remote clients.
 
-**Q: Can I use this with other LLM providers (OpenAI, Anthropic)?**  
-Yes! FastMCP and the Model Context Protocol are standard open specifications. While the included `agent.py` uses the Groq SDK, you can easily swap it for Anthropic's SDK, OpenAI's SDK, or any other agent builder.
+- **Can I use other LLM providers (OpenAI, Anthropic, etc.)?**  
+  Yes. FastMCP follows open standards; swap the Groq SDK in `agent.py` for any provider’s SDK.
 
-**Q: My Claude Desktop doesn't show the tools. What's wrong?**  
-- Ensure the paths under `mcpServers` in your config JSON are absolute and correct.
-- Verify that your terminal can run `python` and has the necessary dependencies (`fastmcp`) installed.
-- Check Claude Desktop's log directory for configuration errors.
-- Restart Claude Desktop completely after changing the config file.
+- **Why doesn’t Claude Desktop show my tools?**  
+  • Ensure absolute paths in the `mcpServers` config.  
+  • Verify Python and FastMCP are installed.  
+  • Restart Claude Desktop after changes.
 
-**Q: Is the `calculator` tool safe to expose publicly?**  
-The tool uses `eval()` with a heavily restricted namespace which is safe for learning and local play. For production environments, it is recommended to use a robust, dedicated math parsing library like `simpleeval`.
+- **Is the tool safe to expose publicly?**  
+  It uses a restricted `eval` sandbox – fine for learning, but use a dedicated math parser (e.g., `simpleeval`) for production.
 
+- **How do I add a custom tool?**  
+  Decorate a function with `@mcp.tool()`, add a docstring, and restart the server.
+
+- **How can I rebuild and push the Docker image?**  
+  ```bash
+  docker build -t mohd-faizy/fastmcp-server:latest .
+  docker push mohd-faizy/fastmcp-server:latest
+  ```
 ---
 
 ## 📚 Learn More
