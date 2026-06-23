@@ -24,7 +24,7 @@
 <!-- Repository Metrics -->
 <p align="center">
   <a href="https://github.com/mohd-faizy/fastmcp-server/stargazers"><img src="https://img.shields.io/github/stars/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=ffd700" alt="Stars"></a>
-  <a href="https://github.com/mohd-faizy/fastmcp-server/issues"><img src="https://img.shields.io/github/issues/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=ef4444" alt="GitHub Issues"></a>
+  <a href="https://github.com/mohd-faizy/fastmcp-server/issues"><img src="https://img.shields.io/github/issues/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=ef4444" alt="Issues"></a>
   <a href="https://github.com/mohd-faizy/fastmcp-server/commits/main"><img src="https://img.shields.io/github/last-commit/mohd-faizy/fastmcp-server?style=for-the-badge&logo=git&logoColor=white&color=8b5cf6" alt="Last Commit"></a>
   <a href="https://github.com/mohd-faizy/fastmcp-server"><img src="https://img.shields.io/github/repo-size/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=6b7280" alt="Repo Size"></a>
 </p>
@@ -33,8 +33,8 @@
 <p align="center">
   <a href="https://github.com/mohd-faizy"><img src="https://img.shields.io/badge/Author-mohd--faizy-red?style=for-the-badge&logo=github&logoColor=white" alt="Author"></a>
   <a href="https://github.com/mohd-faizy/fastmcp-server"><img src="https://img.shields.io/maintenance/yes/2026?style=for-the-badge&color=28a745" alt="Maintained"></a>
-  <a href="https://github.com/mohd-faizy/fastmcp-server/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mohd-faizy/fastmcp-server?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=24292e" alt="License"></a>
-  <a href="https://github.com/mohd-faizy/fastmcp-server/pulls"><img src="https://img.shields.io/badge/Contributions-Welcome-0059b3?style=for-the-badge&logo=handshake&logoColor=white" alt="Contributions Welcome"></a>
+  <a href="https://github.com/mohd-faizy/fastmcp-server/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=24292e" alt="License"></a>
+  <a href="https://github.com/mohd-faizy/fastmcp-server/pulls"><img src="https://img.shields.io/badge/Contributions-Welcome-0059b3?style=for-the-badge&logo=handshake&logoColor=white" alt="Contributions"></a>
 </p>
 
 </div>
