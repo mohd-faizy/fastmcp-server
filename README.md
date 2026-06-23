@@ -12,14 +12,14 @@
   <strong>A beginner-friendly Model Context Protocol (MCP) server built with FastMCP, featuring an interactive Python AI Agent for tool discovery and integration.</strong>
 </p>
 
-<!-- Tech Stack & Platforms -->
+<!-- update -->
 <p align="center">
   <a href="https://github.com/jlowin/fastmcp"><img src="https://img.shields.io/badge/FastMCP-3.4.2%2B-0059b3?style=for-the-badge&logo=python&logoColor=white" alt="FastMCP"></a>
   <a href="https://python.org/"><img src="https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"></a>
   <a href="https://www.docker.com/"><img src="https://img.shields.io/badge/Docker-Supported-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"></a>
 </p>
 
-<!-- Repository Metrics -->
+<!-- update -->
 <p align="center">
   <a href="https://github.com/mohd-faizy/fastmcp-server/stargazers"><img src="https://img.shields.io/github/stars/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=ffd700" alt="Stars"></a>
   <a href="https://github.com/mohd-faizy/fastmcp-server/issues"><img src="https://img.shields.io/github/issues/mohd-faizy/fastmcp-server?style=for-the-badge&logo=github&logoColor=white&color=ef4444" alt="Issues"></a>

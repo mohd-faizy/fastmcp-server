@@ -1,9 +1,9 @@
-# ──────────────────────────────────────────────────────────────
-# Fast MCP Server — Docker Compose
-# ──────────────────────────────────────────────────────────────
-# Start:   docker compose up --build
-# Stop:    docker compose down
-# ──────────────────────────────────────────────────────────────
+# update
+# update
+# update
+# update
+# update
+# update
 
 services:
   mcp-server:
