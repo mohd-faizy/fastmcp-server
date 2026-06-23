@@ -1,5 +1,3 @@
-<h1>Fast MCP Server</h1>
-
 
 <div align="center">
 
